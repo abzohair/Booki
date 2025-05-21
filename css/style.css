@@ -562,24 +562,22 @@ header {
     .search-bar {
         border-radius: 15px;
         margin-bottom: 15px;
-        position: relative;
         overflow: visible;
-        height: 49px;
+        height: 47px;
     }
 
     .search-bar .location-icon {
-        border: 1px solid var(--main-bg-color);
-        border-right: none;
         border-radius: 15px 0 0 15px;
     }
 
     .search-bar input::placeholder {
-        font-size: medium;
+        font-size: small;
     }
 
     .search-bar .search-btn {
         border-radius: 15px;
         box-shadow: 0 2px 5px #757575;
+        height: 47px;
     }
 
     .search-btn .btn-text {
