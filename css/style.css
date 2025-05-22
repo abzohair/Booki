@@ -87,6 +87,7 @@ a {
 }
 
 
+/* ******************* desktop *********************************/
 /* ******************* Header *********************************/
 .navbar,
 .nav-links {
@@ -532,12 +533,25 @@ header {
         height: 25px;
     }
 
-    .navbar .nav-links {
+    /* ****************** annuler le comportement par défaut du document ******************* */
+    /* avec comportement par défaut */
+    /* .navbar .nav-links {
         width: 100%;
         text-align: center;
         gap: 0;
 
+    } */
+
+    /* sans comportement par défaut */
+    .navbar .nav-links {
+        width: 100%;
+        text-align: center;
+        height: 40px;
+        gap: 0;
+
     }
+
+    /* ********************************************************************************** */
 
     .navbar .nav-links li {
         width: 100%;
@@ -549,7 +563,7 @@ header {
     }
 
     .navbar .nav-links li a:hover {
-        border-top: none;
+        border: none;
     }
 
     /* ************* search section ***************** */
