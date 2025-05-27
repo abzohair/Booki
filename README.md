@@ -1,7 +1,7 @@
 HEAD
 # Booki
 
-Site de réservation de logements et activités à Marseille.
+Site de réservation de logements.
 
 ## Technologies utilisées
 
@@ -38,4 +38,3 @@ Le site s'adapte automatiquement aux tailles d’écran suivantes :
 - Desktop : > 1024px  
 - Tablette : entre 768px et 1024px  
 - Mobile : < 768px
-63f82646dfb7cb41a706d2c0b46e2adf79bbf53d
