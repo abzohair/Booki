@@ -47,6 +47,11 @@ a {
     font-size: 22px;
 }
 
+.filter-buttons button,
+.navbar .nav-links a {
+    transition: all 0.5s ease;
+}
+
 .search-btn {
     background-color: var(--main-color);
     color: white;
@@ -104,26 +109,58 @@ a {
 .navbar,
 .nav-links {
     display: flex;
-
 }
 
 /* ******************* Header *********************************/
-header {
-    padding: 12px 0;
-}
-
 .navbar {
     justify-content: space-between;
     align-items: center;
 }
 
-.logo {
+.navbar .big-logo {
+    display: none;
+    padding: 0;
+}
+
+.navbar .logo {
     height: 20px;
     padding-top: 5px;
 }
 
-.nav-links {
+.navbar .nav-links {
     gap: 30px;
+}
+
+/* ******************* menu avec li:flex *********************************/
+.nav-links li {
+    width: 100%;
+    height: 100%;
+    padding: 8px 0 0 0;
+    border-top: 4px solid transparent;
+    transition: all 0.5s ease;
+}
+
+.nav-links li a {
+    display: flex;
+    justify-content: center;
+    color: var(--main-black-color);
+    font-weight: 500;
+    cursor: default;
+}
+
+.nav-links li:hover {
+    border-top: 4px solid var(--main-color);
+}
+
+.nav-links li a:hover {
+    color: var(--main-color);
+}
+
+/* ******************* menu avec li:flex *********************************/
+
+/* ******************* menu simple *********************************/
+/* header {
+    padding: 12px 0;
 }
 
 .nav-links li a {
@@ -137,7 +174,9 @@ header {
 .nav-links li a:hover {
     color: var(--main-color);
     border-top: 4px solid var(--main-color);
-}
+} */
+
+/* ******************* menu simple *********************************/
 
 
 /* ********************** filter *********************** */
@@ -191,7 +230,6 @@ header {
 
 .search-bar button {
     padding: 15px;
-    /* text-align: center; */
 }
 
 /* ********************** filter - filters ************************ */
@@ -228,6 +266,7 @@ header {
 
 .filter-buttons button:hover {
     background-color: var(--filter-bg-color);
+
 }
 
 .info {
@@ -294,6 +333,7 @@ header {
 .hebergements {
     width: 65%;
     gap: 30px;
+
 }
 
 .hebergements-cards {
@@ -304,17 +344,29 @@ header {
 
 }
 
+.hebergements-cards .card {
+    height: 100%;
+}
+
 .hebergements-cards img {
+    width: 100%;
     height: 100px;
     border-radius: 20px 20px 0 0;
 }
 
 .hebergements-cards .card-content {
     padding: 0 10px 10px 10px;
+    height: 100%;
+    justify-content: space-between;
+
 }
 
 .hebergements-cards .card-title {
     margin-bottom: 10px;
+}
+
+.hebergements-cards .card-subtitle {
+    font-size: 14px;
 }
 
 
@@ -350,7 +402,7 @@ header {
 
 /* **************************** activities - footer ************************** */
 .section-activities .activites-cards,
-.footer {
+footer {
     display: grid;
 }
 
@@ -378,12 +430,13 @@ header {
     height: 320px;
 }
 
-.section-activities h5 {
+.section-activities h3 {
     padding: 15px;
+    font-size: 15px;
 }
 
 /* ******************* footer *************** */
-.footer {
+footer {
     padding: 20px;
     background-color: var(--main-bg-color);
     grid-template-columns: repeat(3, 1fr);
@@ -391,8 +444,8 @@ header {
 }
 
 
-.footer .item,
-.footer ul {
+footer .item,
+footer ul {
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -417,14 +470,27 @@ header {
     }
 
     /* ************************** header *******************  */
-    header .logo {
-        height: 23px;
+    .navbar .logo {
+        display: none;
     }
 
-    header .nav-links li {
-        font-size: 15px;
-        padding-bottom: 20px;
+    .navbar .big-logo {
+        display: block;
+        width: 8%;
+        padding-top: 8px;
     }
+
+    /* ************************** menu li:flex *******************  */
+    /* prend le paramètre du desktop par défaut */
+
+    /* ************************** menu li:flex *******************  */
+
+    /* ************************** menu sipmle *******************  */
+    /* header {
+        padding-top: 8px;
+    } */
+
+    /* ************************** menu sipmle *******************  */
 
     /* ********************* search-section filters ****************** */
     .search-section h1 {
@@ -537,15 +603,22 @@ header {
 
 
     /* **************************** header ******************* */
-    .navbar {
+    header .navbar {
         padding: 10px 0 10px 0;
         flex-direction: column;
         gap: 20px;
 
     }
 
+
     .navbar .logo {
-        height: 25px;
+        display: none;
+
+    }
+
+    .navbar .big-logo {
+        display: block;
+        width: 20%;
     }
 
     /* ****************** annuler le comportement par défaut du document ******************* */
@@ -560,26 +633,55 @@ header {
     /* sans comportement par défaut */
     .navbar .nav-links {
         width: 100%;
-        text-align: center;
         height: 40px;
+        /* text-align: center; */
+        /* text-align pour header simple  */
         gap: 0;
 
     }
 
-    /* ********************************************************************************** */
+    /* ************************************** menu li:flex ************************************** */
 
-    .navbar .nav-links li {
+    .nav-links li {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        border-bottom: 2px solid transparent;
+    }
+
+    .nav-links li a {
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+    }
+
+    .nav-links li:hover {
+        border-bottom: 2px solid var(--main-color);
+        border-top: 4px solid transparent;
+    }
+
+    .nav-links li a:hover {
+        color: var(--main-color);
+    }
+
+    /* ************************************** menu li:flex ************************************** */
+
+    /* ************************************** menu simple ************************************** */
+    /* .nav-links li {
         width: 100%;
         padding: 10px;
     }
 
-    .navbar .nav-links li:hover {
+    .nav-links li:hover {
         border-bottom: 2px solid var(--main-color);
     }
 
-    .navbar .nav-links li a:hover {
-        border: none;
-    }
+    .nav-links li a:hover {
+        border-top: 4px solid transparent;
+    } */
+
+    /* ************************************** menu simple ************************************** */
 
     /* ************* search section ***************** */
     .search-section {
@@ -589,6 +691,7 @@ header {
     }
 
     .search-bar {
+        max-width: none;
         border-radius: 15px;
         margin-bottom: 15px;
         overflow: visible;
@@ -654,15 +757,6 @@ header {
         margin: 0;
     }
 
-    .card-title,
-    .card-rating {
-        font-size: 13px;
-    }
-
-    .card-subtitle {
-        font-size: 12px;
-    }
-
     .populaires-cards {
         display: grid;
         /* flex-direction: column; */
@@ -673,10 +767,19 @@ header {
         margin-top: 10px;
     }
 
+    .populaires-cards .card-title {
+        font-size: 14px;
+    }
+
+    .populaires-cards .card-subtitle,
+    .populaires-cards .card-rating {
+        font-size: 12px;
+    }
+
     /* *********************** hebergement-activities-footer ************************ */
     .hebergements-cards,
     .section-activities .activites-cards,
-    footer .footer {
+    footer {
         display: grid;
         grid-template-columns: 1fr;
         gap: 20px;
@@ -691,11 +794,7 @@ header {
         height: 140px;
     }
 
-    footer .footer {
+    footer {
         padding: 20px 40px 20px 40px;
     }
-
-
-
-
 }
