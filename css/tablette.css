@@ -1,0 +1,131 @@
+/* ************************* Le code ci-dessous correspond à la version responsive uniquement ************************* */
+
+/****** Media queries ***********/
+/* Medium devices (tablets, less/equal than 1024px) */
+@media (max-width: 1024px) {
+
+    .hebergements-and-populaires,
+    .search-section .filters {
+        flex-direction: column;
+    }
+
+    .section-title {
+        font-size: 22px;
+    }
+
+    /* ************************** header *******************  */
+    .navbar .logo {
+        display: none;
+    }
+
+    .navbar .big-logo {
+        display: block;
+        width: 8%;
+        padding-top: 8px;
+    }
+
+    /* ************************** menu li:flex *******************  */
+    /* prend le paramètre du desktop par défaut */
+
+    /* ************************** menu li:flex *******************  */
+
+    /* ************************** menu sipmle *******************  */
+    /* header {
+        padding-top: 8px;
+    } */
+
+    /* ************************** menu sipmle *******************  */
+
+    /* ********************* search-section filters ****************** */
+    .search-section h1 {
+        font-size: 17px;
+    }
+
+    .search-section p {
+        font-size: 14px;
+    }
+
+    .search-section .search-btn {
+        border-radius: 0 10px 10px 0;
+    }
+
+    /* ********************* filters ****************** */
+    .search-section .filters {
+        align-items: start;
+    }
+
+
+    /* ************************** hebergement populaires *******************  */
+    .hebergements-and-populaires .hebergements {
+        width: 100%;
+    }
+
+    .hebergements-cards .card {
+        overflow: hidden;
+    }
+
+    .hebergements-cards img {
+        height: 90px;
+    }
+
+    .hebergements-cards .card-title,
+    .hebergements-cards .card-rating {
+        font-size: 14px;
+    }
+
+    .hebergements-cards .card-subtitle {
+        font-size: 13px;
+    }
+
+    /* ************************** populaires *******************  */
+    .hebergements-and-populaires .populaires {
+        width: 100%;
+        margin-top: 50px;
+        padding: 20px;
+
+    }
+
+    .populaires-cards {
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    .populaires-cards a {
+        width: 100%;
+
+    }
+
+    .populaires-cards .card {
+        margin-top: 15px;
+        height: 120px;
+
+    }
+
+    .populaires-cards img {
+        height: 110px;
+
+    }
+
+    .populaires-cards .card-title {
+        font-size: 12px;
+    }
+
+    .populaires-cards .card-subtitle,
+    .populaires-cards .card-rating {
+        font-size: 11px;
+    }
+
+    /* ******************** activitée marseille *********************** */
+    .section-activities img {
+        height: 150px;
+    }
+
+    footer h2 {
+        font-size: 20px;
+    }
+
+    footer li {
+        font-size: 15px;
+    }
+
+}
